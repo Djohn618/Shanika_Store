@@ -1,0 +1,474 @@
+/* About Page Specific Styles */
+
+/* Page Header */
+.page-header {
+  padding: 8rem 0 4rem;
+  background: var(--gradient-primary);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+  animation: float 15s ease-in-out infinite;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out;
+}
+
+.header-content h1 {
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Story Timeline */
+.story-timeline {
+  padding: 6rem 0;
+  background: var(--bg-secondary);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gradient-primary);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item:not(.reverse) .timeline-image {
+  grid-column: 3; /* Bild auf der rechten Seite */
+}
+
+.timeline-item.reverse .timeline-image {
+  grid-column: 1; /* Bild auf der linken Seite */
+}
+
+.timeline-item.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item.reverse {
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.timeline-item.reverse .timeline-content {
+  grid-column: 3;
+  text-align: left;
+}
+
+/* .timeline-item.reverse .timeline-image {
+  grid-column: 1;
+} */
+
+.timeline-content {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-medium);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-large);
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  transform: translateY(-50%);
+}
+
+.timeline-item:not(.reverse) .timeline-content::before {
+  right: -30px;
+  border-left-color: var(--bg-primary);
+}
+
+.timeline-item.reverse .timeline-content::before {
+  left: -30px;
+  border-right-color: var(--bg-primary);
+}
+
+.timeline-year {
+  display: inline-block;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  width: 4rem;
+  height: 4rem;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-medium);
+  z-index: 2;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-marker:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-large);
+}
+
+.timeline-image {
+  position: relative;
+  display: block !important; /* Sichtbarkeit erzwingen */
+}
+
+.timeline-image img {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-large);
+  transition: all 0.3s ease;
+}
+
+.timeline-image img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Mission & Vision */
+.mission-vision {
+  padding: 6rem 0;
+  background: var(--bg-primary);
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-card,
+.vision-card {
+  background: var(--bg-secondary);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-card::before,
+.vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-large);
+}
+
+.mission-card:hover::before,
+.vision-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-icon {
+  width: 5rem;
+  height: 5rem;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover .card-icon,
+.vision-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.mission-card h3,
+.vision-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.mission-card p,
+.vision-card p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* Founder's Message */
+.founders-message {
+  padding: 6rem 0;
+  background: var(--bg-tertiary);
+  text-align: center;
+}
+
+.message-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  opacity: 0.3;
+  margin-bottom: 2rem;
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote p {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+blockquote cite {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Active nav link */
+.nav-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 6rem 0 3rem;
+  }
+  
+  .timeline::before {
+    left: 2rem;
+  }
+  
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    position: relative;
+  }
+  
+  .timeline-item > * {
+    width: 100%;
+  }
+  
+  .timeline-item .timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    margin-left: 0;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+  
+  .timeline-item .timeline-content {
+    margin-left: 2rem;
+    padding: 1.5rem;
+    order: 2; /* Inhalt nach dem Bild */
+  }
+  
+  .timeline-item .timeline-image {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    order: 1; /* Bild zuerst anzeigen */
+  }
+  
+  .timeline-item.reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    position: relative;
+  }
+  
+  .timeline-item.reverse .timeline-content {
+    order: 2;
+  }
+  
+  .timeline-item.reverse .timeline-image {
+    order: 1;
+  }
+  
+  .timeline-content::before {
+    display: none;
+  }
+  
+  .timeline-image img {
+    max-width: 100%;
+    height: 200px;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .mission-card,
+  .vision-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .card-icon {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+  
+  blockquote p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    margin-left: 1rem;
+  }
+  
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .timeline-marker {
+    margin-left: -1rem;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-card,
+  .vision-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Animation delays for timeline items */
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Scroll reveal animation */
+.timeline-item.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+

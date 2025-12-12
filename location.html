@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location & Contact - Shanika Super & Grocery</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/location.css">
+</head>
+<body>
+    <!-- Language Selector -->
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Shanika Super & Grocery</h2>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <div class="language-selector-nav">
+                    <div class="language-dropdown">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu" id="languageMenu">
+                            <a href="#" data-lang="en" class="language-option active">
+                                <span class="flag">🇺🇸</span>
+                                English
+                            </a>
+                            <a href="#" data-lang="si" class="language-option">
+                                <span class="flag">🇱🇰</span>
+                                සිංහල
+                            </a>
+                            <a href="#" data-lang="ta" class="language-option">
+                                <span class="flag">🇱🇰</span>
+                                தமிழ்
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="index.html" class="nav-link" data-translate="nav-home">Home</a>
+                <a href="about.html" class="nav-link" data-translate="nav-about">About Us</a>
+                <a href="location.html" class="nav-link active" data-translate="nav-location">Location & Contact</a>
+                <a href="feedback.html" class="nav-link" data-translate="nav-feedback">Feedback</a>
+                <div class="theme-toggle-nav">
+                    <button class="theme-btn" id="themeToggle">
+                        <i class="fas fa-sun" id="themeIcon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 data-translate="location-page-title">Visit Our Store</h1>
+                <p data-translate="location-page-subtitle">Find us in the heart of Trincomalee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Info -->
+    <section class="location-info">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-details">
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h3 data-translate="location-address-title">Our Address</h3>
+                            <p data-translate="location-address">No. 119, Near Roundabout, Trincomalee, Sri Lanka</p>
+                            <a href="#" class="directions-btn" data-translate="location-directions">
+                                <i class="fas fa-route"></i>
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h3 data-translate="location-hours-title">Opening Hours</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span data-translate="location-weekdays">Monday - Saturday</span>
+                                    <span>6:00 AM - 9:00 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span data-translate="location-sunday">Sunday</span>
+                                    <span>7:00 AM - 8:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h3 data-translate="location-contact-title">Contact Information</h3>
+                            <div class="contact-list">
+                                <a href="mailto:deshanjohn618@gmail.com" class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    deshanjohn618@gmail.com
+                                </a>
+                                <div class="contact-item">
+                                    <i class="fas fa-store"></i>
+                                    <span data-translate="location-store-type">Grocery & Supermarket</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-image">
+                    <div class="image-container">
+                        <img src="images/Store.jpg" alt="Shanika Super & Grocery Store" class="store-image">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h4 data-translate="location-image-title">Visit Us Today!</h4>
+                                <p data-translate="location-image-text">Experience quality shopping in a friendly environment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="location-map-title">Find Us on the Map</h2>
+                <p data-translate="location-map-subtitle">Located conveniently near the main roundabout in Trincomalee</p>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.123456789!2d81.2152!3d8.5874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzUnMTQuNiJOIDgxwrAxMic1NC43IkU!5e0!3m2!1sen!2slk!4v1234567890"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="location-map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landmarks Section -->
+    <section class="landmarks">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="location-landmarks-title">Nearby Landmarks</h2>
+                <p data-translate="location-landmarks-subtitle">Easy to find with these familiar locations</p>
+            </div>
+            <div class="landmarks-grid">
+                <div class="landmark-card">
+                    <div class="landmark-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4 data-translate="landmark-bank">People's Bank</h4>
+                    <p data-translate="landmark-bank-desc">Right across from our store</p>
+                </div>
+                <div class="landmark-card">
+                    <div class="landmark-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h4 data-translate="landmark-roundabout">Main Roundabout</h4>
+                    <p data-translate="landmark-roundabout-desc">Just a few meters away</p>
+                </div>
+                <div class="landmark-card">
+                    <div class="landmark-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4 data-translate="landmark-center">City Center</h4>
+                    <p data-translate="landmark-center-desc">In the heart of Trincomalee</p>
+                </div>
+                <div class="landmark-card">
+                    <div class="landmark-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h4 data-translate="landmark-transport">Public Transport</h4>
+                    <p data-translate="landmark-transport-desc">Easy bus and taxi access</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info-side">
+                    <h2 data-translate="contact-form-title">Get in Touch</h2>
+                    <p data-translate="contact-form-subtitle">
+                        Have questions or need more information? We'd love to hear from you!
+                    </p>
+                    
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h4 data-translate="contact-feature-support">Customer Support</h4>
+                                <p data-translate="contact-feature-support-desc">Friendly and helpful service</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <h4 data-translate="contact-feature-delivery">Local Delivery</h4>
+                                <p data-translate="contact-feature-delivery-desc">Available for bulk orders</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4 data-translate="contact-feature-partnership">Business Partnerships</h4>
+                                <p data-translate="contact-feature-partnership-desc">Wholesale and institutional supply</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-side">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-translate="form-name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-translate="form-email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-translate="form-phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-translate="form-subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" data-translate="form-subject-select">Select a subject</option>
+                                <option value="general" data-translate="form-subject-general">General Inquiry</option>
+                                <option value="delivery" data-translate="form-subject-delivery">Delivery Service</option>
+                                <option value="wholesale" data-translate="form-subject-wholesale">Wholesale Orders</option>
+                                <option value="feedback" data-translate="form-subject-feedback">Feedback</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="form-message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span data-translate="form-submit">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer-title">Shanika Super & Grocery</h3>
+                    <p data-translate="footer-desc">
+                        Your trusted neighborhood grocery store in Trincomalee, serving the community with quality and care.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-quick-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                        <li><a href="location.html" data-translate="nav-location">Location & Contact</a></li>
+                        <li><a href="feedback.html" data-translate="nav-feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-contact">Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="footer-address">No. 119, Trincomalee, Sri Lanka</span></p>
+                        <p><i class="fas fa-envelope"></i> djohn@haeusler.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shanika Super & Grocery. <span data-translate="footer-rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/location.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Shanika Super & Grocery</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+    <!-- Language Selector -->
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Shanika Super & Grocery</h2>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <div class="language-selector-nav">
+                    <div class="language-dropdown">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu" id="languageMenu">
+                            <a href="#" data-lang="en" class="language-option active">
+                                <span class="flag">🇺🇸</span>
+                                English
+                            </a>
+                            <a href="#" data-lang="si" class="language-option">
+                                <span class="flag">🇱🇰</span>
+                                සිංහල
+                            </a>
+                            <a href="#" data-lang="ta" class="language-option">
+                                <span class="flag">🇱🇰</span>
+                                தமிழ்
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="index.html" class="nav-link" data-translate="nav-home">Home</a>
+                <a href="about.html" class="nav-link" data-translate="nav-about">About Us</a>
+                <a href="location.html" class="nav-link" data-translate="nav-location">Location & Contact</a>
+                <a href="feedback.html" class="nav-link active" data-translate="nav-feedback">Feedback</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 data-translate="feedback-page-title">Share Your Experience</h1>
+                <p data-translate="feedback-page-subtitle">Your feedback helps us serve you better</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Stats -->
+    <section class="feedback-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label" data-translate="stat-rating">Average Rating</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label" data-translate="stat-customers">Happy Customers</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label" data-translate="stat-reviews">Customer Reviews</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label" data-translate="stat-years">Years of Service</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback-form-section">
+        <div class="container">
+            <div class="feedback-content">
+                <div class="feedback-info">
+                    <h2 data-translate="feedback-form-title">Leave Your Feedback</h2>
+                    <p data-translate="feedback-form-subtitle">
+                        We value your opinion and strive to improve our service based on your feedback. 
+                        Please take a moment to share your experience with us.
+                    </p>
+                    
+                    <div class="feedback-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-translate="benefit-improve">Help us improve our service</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-translate="benefit-community">Support our community business</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-translate="benefit-others">Help other customers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-form-container">
+                    <form class="feedback-form" id="feedbackForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customerName" data-translate="form-name">Your Name</label>
+                                <input type="text" id="customerName" name="customerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerEmail" data-translate="form-email">Email Address</label>
+                                <input type="email" id="customerEmail" name="customerEmail" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visitDate" data-translate="form-visit-date">Date of Visit</label>
+                            <input type="date" id="visitDate" name="visitDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="form-rating">Overall Rating</label>
+                            <div class="rating-input" id="ratingInput">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1"><i class="fas fa-star"></i></label>
+                            </div>
+                            <div class="rating-text" id="ratingText"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="form-categories">What would you like to rate?</label>
+                            <div class="category-ratings">
+                                <div class="category-item">
+                                    <span data-translate="category-service">Customer Service</span>
+                                    <div class="mini-rating" data-category="service">
+                                        <i class="fas fa-star" data-value="1"></i>
+                                        <i class="fas fa-star" data-value="2"></i>
+                                        <i class="fas fa-star" data-value="3"></i>
+                                        <i class="fas fa-star" data-value="4"></i>
+                                        <i class="fas fa-star" data-value="5"></i>
+                                    </div>
+                                </div>
+                                <div class="category-item">
+                                    <span data-translate="category-quality">Product Quality</span>
+                                    <div class="mini-rating" data-category="quality">
+                                        <i class="fas fa-star" data-value="1"></i>
+                                        <i class="fas fa-star" data-value="2"></i>
+                                        <i class="fas fa-star" data-value="3"></i>
+                                        <i class="fas fa-star" data-value="4"></i>
+                                        <i class="fas fa-star" data-value="5"></i>
+                                    </div>
+                                </div>
+                                <div class="category-item">
+                                    <span data-translate="category-prices">Prices</span>
+                                    <div class="mini-rating" data-category="prices">
+                                        <i class="fas fa-star" data-value="1"></i>
+                                        <i class="fas fa-star" data-value="2"></i>
+                                        <i class="fas fa-star" data-value="3"></i>
+                                        <i class="fas fa-star" data-value="4"></i>
+                                        <i class="fas fa-star" data-value="5"></i>
+                                    </div>
+                                </div>
+                                <div class="category-item">
+                                    <span data-translate="category-cleanliness">Store Cleanliness</span>
+                                    <div class="mini-rating" data-category="cleanliness">
+                                        <i class="fas fa-star" data-value="1"></i>
+                                        <i class="fas fa-star" data-value="2"></i>
+                                        <i class="fas fa-star" data-value="3"></i>
+                                        <i class="fas fa-star" data-value="4"></i>
+                                        <i class="fas fa-star" data-value="5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="feedbackType" data-translate="form-feedback-type">Type of Feedback</label>
+                            <select id="feedbackType" name="feedbackType" required>
+                                <option value="" data-translate="form-select-type">Select feedback type</option>
+                                <option value="compliment" data-translate="type-compliment">Compliment</option>
+                                <option value="suggestion" data-translate="type-suggestion">Suggestion</option>
+                                <option value="complaint" data-translate="type-complaint">Complaint</option>
+                                <option value="general" data-translate="type-general">General Feedback</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="feedbackMessage" data-translate="form-message">Your Feedback</label>
+                            <textarea id="feedbackMessage" name="feedbackMessage" rows="5" required 
+                                placeholder="Please share your detailed feedback..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="allowPublic" name="allowPublic">
+                                <span class="checkmark"></span>
+                                <span data-translate="form-allow-public">Allow us to share this feedback publicly (anonymous)</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <span data-translate="form-submit">Submit Feedback</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="reviews-title">What Our Customers Say</h2>
+                <p data-translate="reviews-subtitle">Read genuine feedback from our valued customers</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Priya S.</h4>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 days ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p data-translate="review-1">
+                            "Excellent service and fresh products! The staff is always friendly and helpful. 
+                            I've been shopping here for years and they never disappoint."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Rajesh K.</h4>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">1 week ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p data-translate="review-2">
+                            "Great prices and quality products. The store is well-organized and clean. 
+                            Perfect location near the roundabout makes it very convenient."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>Amara D.</h4>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 weeks ago</div>
+                    </div>
+                    <div class="review-content">
+                        <p data-translate="review-3">
+                            "Family-owned business with a personal touch. They remember their regular customers 
+                            and always provide excellent service. Highly recommended!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer-title">Shanika Super & Grocery</h3>
+                    <p data-translate="footer-desc">
+                        Your trusted neighborhood grocery store in Trincomalee, serving the community with quality and care.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-quick-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav-home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                        <li><a href="location.html" data-translate="nav-location">Location & Contact</a></li>
+                        <li><a href="feedback.html" data-translate="nav-feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-contact">Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="footer-address">No. 119, Trincomalee, Sri Lanka</span></p>
+                        <p><i class="fas fa-envelope"></i> deshanjohn618@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shanika Super & Grocery. <span data-translate="footer-rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/feedback.js"></script>
+</body>
+</html>
+

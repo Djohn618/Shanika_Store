@@ -3,91 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <script src="https://kit.fontawesome.com/ca3cc27996.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Css/index..css">
-    <title>Shanika Super & Grocery</title>
+    <title>Shanika Super & Grocery - Premium Quality Groceries in Trincomalee</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body class="letter">
-    
-    <!--Das ist das anfang des Websites (Header)-->
-    <header>
-
-        <h1> </mark><bold>Shanika Super & Grocery</bold></h1>
-
-    </header>
-    
-<!--Das ist das Navigationsbar Hier habe ich alle verschiedene html links z.B About us-->
+<body>
 
 
-    <nav class="navbar">
-        <ul>
-
-            <li> <a href="index.html">Home</a></li>
-            
-            <li> <a href="About_us.html">About us</a></li>
-            
-            <li> <a href="Location_and_Contact.html">Location & contact</a></li>
-           
-             <li> <a href="Feedback.html">Feedback</a></li>
-
-        </ul>
-    </nav> </h1>
-
-    <br> <!--hier ist ein break-->
 
 
-    <main class="container">
-        <div>
-            
-            <aside>
-                    <!--TEST-->       
-                <h2>
-                At Shanika Super & Grocery, we are dedicated to providing you with the freshest and highest-quality groceries. From everyday essentials to specialty products, we offer a wide selection of fresh fruits, vegetables, dairy, spices, and much more.
-                Located in Trincomalee, our store is a place where quality meets convenience. Whether you're looking for locally sourced produce or international ingredients, we have everything you need under one roof.
-                </h2>
-                        </aside>
-           
-            
-            <section>
-                <h2> Come visit us and experience friendly service, great prices, and a welcoming shopping environment. </h2>
-            </section>
-
-            <img src="/images/Store.jpg" alt="This is a Picture of the Store" height="300" class="rounded-img">
-
-            <article>
-              <h2> We look forward to serving you!</h2>
-          </article>
-          
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Shanika Super & Grocery</h2>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <div class="language-selector-nav">
+                    <div class="language-dropdown">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu" id="languageMenu">
+                            <a href="#" data-lang="en" class="language-option active">
+                                <span class="flag">🇺🇸</span>
+                                English
+                            </a>
+                            <a href="#" data-lang="si" class="language-option">
+                                <span class="flag">🇱🇰</span>
+                                සිංහල
+                            </a>
+                            <a href="#" data-lang="ta" class="language-option">
+                                <span class="flag">🇱🇰</span>
+                                தமிழ்
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#home" class="nav-link" data-translate="nav-home">Home</a>
+                <a href="about.html" class="nav-link" data-translate="nav-about">About Us</a>
+                <a href="location.html" class="nav-link" data-translate="nav-location">Location & Contact</a>
+                <a href="feedback.html" class="nav-link" data-translate="nav-feedback">Feedback</a>
+                <div class="theme-toggle-nav">
+                    <button class="theme-btn" id="themeToggle">
+                        <i class="fas fa-sun" id="themeIcon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-</main>
-
-<br><br><br><br><br><br><br><br><br><br><br>
-
-<footer>
-    <nav>
-      <ul>
-        <li>
-          <a href="https://de-de.facebook.com/login/?next=https%3A%2F%2Fde-de.facebook.com%2F" target="_blank" title="Goes to Facebook">
-            <i class="fa-brands fa-facebook fa-bounce" style="color: #2049c5;"></i> <!-- Facebook icon -->
-          </a>
-        </li> 
-        <li>
-          <a href="https://youtube.com/" target="_blank" title="Goes to YouTube">
-            <i class="fa-brands fa-youtube fa-bounce" style="color: #e22c2c;"></i> <!-- YouTube icon -->
-          </a>
-        </li>
-        <li>
-          <a href="mailto:deshanjohn618@gmail.com" target="_blank" title="Goes to Email">
-            <i class="fa-solid fa-envelope fa-bounce" style="color: #ffffff;"></i> <!-- Email icon -->
-          </a>
-        </li>
-      </ul>
     </nav>
-  </footer>
-  
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-translate="hero-title">
+                    Welcome to Shanika Super & Grocery
+                </h1>
+                <p class="hero-subtitle" data-translate="hero-subtitle">
+                    Your trusted partner for fresh, quality groceries in Trincomalee
+                </p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary" data-translate="hero-btn-about">
+                        <span>Learn Our Story</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="location.html" class="btn btn-secondary" data-translate="hero-btn-location">
+                        <span>Visit Us</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="images/Store.jpg" alt="Shanika Super & Grocery Store" class="store-image">
+                    <div class="image-decoration"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="features-title">Why Choose Us</h2>
+                <p class="section-subtitle" data-translate="features-subtitle">
+                    Experience the difference with our commitment to quality and service
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 data-translate="feature-fresh-title">Fresh & Quality</h3>
+                    <p data-translate="feature-fresh-desc">
+                        We source the freshest produce and highest quality groceries for our customers
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-translate="feature-convenient-title">Convenient Hours</h3>
+                    <p data-translate="feature-convenient-desc">
+                        Open daily with extended hours to serve you when you need us most
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 data-translate="feature-community-title">Community Focused</h3>
+                    <p data-translate="feature-community-desc">
+                        A family business dedicated to serving our local community with care
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 data-translate="feature-prices-title">Great Prices</h3>
+                    <p data-translate="feature-prices-desc">
+                        Competitive pricing on all your everyday essentials and specialty items
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-translate="cta-title">Visit Us Today</h2>
+                <p data-translate="cta-text">
+                    Come visit us and experience friendly service, great prices, and a welcoming shopping environment. We look forward to serving you!
+                </p>
+                <div class="cta-buttons">
+                    <a href="location.html" class="btn btn-primary" data-translate="cta-btn-location">
+                        <span>Get Directions</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                    <a href="feedback.html" class="btn btn-secondary" data-translate="cta-btn-feedback">
+                        <span>Leave Feedback</span>
+                        <i class="fas fa-comment"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer-title">Shanika Super & Grocery</h3>
+                    <p data-translate="footer-desc">
+                        Your trusted neighborhood grocery store in Trincomalee, serving the community with quality and care.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-quick-links">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-translate="nav-home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav-about">About Us</a></li>
+                        <li><a href="location.html" data-translate="nav-location">Location & Contact</a></li>
+                        <li><a href="feedback.html" data-translate="nav-feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-contact">Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-translate="footer-address">No. 119, Trincomalee, Sri Lanka</span></p>
+                        <p><i class="fas fa-envelope"></i> deshanjohn618@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shanika Super & Grocery. <span data-translate="footer-rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
 

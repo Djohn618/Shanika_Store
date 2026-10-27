@@ -326,6 +326,124 @@ html[lang="si"] .lang-only-note, html[lang="ta"] .lang-only-note { display: bloc
 .footer-bottom { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid rgb(255 255 255 / .2); display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; justify-content: space-between; font-size: .95rem; }
 .footer-bottom ul { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
 
+/* ---------- Quick-action bar (phones only) ---------- */
+.l-short { display: none; }
+.quickbar { display: none; }
+
+/* ==========================================================================
+   Phones and small tablets
+   ========================================================================== */
+@media (max-width: 860px) {
+  html { scroll-padding-top: 80px; }
+  body { font-size: 1.0625rem; padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+  .section { padding-block: 2.75rem; }
+
+  /* One slim top bar */
+  .topbar .wrap { flex-wrap: nowrap; min-height: 38px; padding-block: 0; }
+  .topbar-info { flex-wrap: nowrap; min-width: 0; }
+  .open-now { font-size: .85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .l-full { display: none; }
+  .l-short { display: inline; }
+  .langs button { min-width: 40px; min-height: 32px; padding: .2rem .45rem; font-size: .85rem; }
+
+  /* Compact header that stays at the top */
+  .site-header { position: sticky; top: 0; box-shadow: 0 6px 14px -12px rgb(16 41 90 / .5); }
+  .site-header::after { height: 3px; bottom: -3px; }
+  .site-header .wrap { min-height: 64px; gap: .75rem; }
+  .logo { gap: .6rem; min-width: 0; }
+  .logo img { width: 44px; height: 44px; }
+  .logo-name { font-size: 1.3rem; }
+  .logo-name .ln-2 { display: block; font-size: .7rem; letter-spacing: .12em; color: var(--sign); margin-top: 3px; }
+  .logo-tag { display: none; }
+  .menu-btn { padding: .5rem .75rem; min-height: 44px; border-width: 2px; font-size: .95rem; }
+  .menu-open .menu-btn { border-color: var(--sign); color: var(--sign); }
+  .menu-btn path { transform-box: view-box; transform-origin: 12px 12px; transition: transform .2s ease, opacity .2s ease; }
+  .menu-open .mb-1 { transform: translateY(5px) rotate(45deg); }
+  .menu-open .mb-2 { opacity: 0; }
+  .menu-open .mb-3 { transform: translateY(-5px) rotate(-45deg); }
+  .nav { box-shadow: 0 20px 30px -20px rgb(16 41 90 / .45); }
+  .nav a { font-size: 1.2rem; padding: 1rem .25rem; }
+
+  /* Hero */
+  .hero { padding-block: 1.75rem 2.25rem; }
+  h1 { font-size: clamp(2rem, 8.5vw, 2.6rem); }
+  h2 { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .hero-text .lead { font-size: 1.1rem; }
+  .hero-actions { margin-top: 1.4rem; gap: .6rem 1rem; }
+  .hero-actions .btn:not(.btn--plain) { flex: 1 1 100%; justify-content: center; }
+  .hero-actions .btn--plain { flex: 1 1 100%; justify-content: center; }
+  .hero-photo { padding: 1.25rem .5rem 2.25rem; margin-inline: auto; }
+  .polaroid { padding: 8px 8px 10px; }
+  .polaroid figcaption { font-size: 1.25rem; }
+  .polaroid::before { width: 80px; margin-left: -40px; height: 22px; top: -10px; }
+  .hero-note { left: .5rem; }
+  .hand { font-size: 1.4rem; }
+
+  /* Shelves board */
+  .board { border-width: 10px; padding: 1.25rem 1.1rem 1.4rem; }
+  .board h2 { font-size: 2.1rem; }
+  .board li { font-size: 1.4rem; }
+
+  /* Story */
+  .story { gap: 1.5rem; }
+  .story > .polaroid { width: 220px; margin-inline: auto; }
+  .pull { font-size: 1.15rem; margin: 1.4rem 0; }
+
+  /* Hours sign */
+  .door-sign { max-width: none; padding: 1.4rem 1.1rem 1.1rem; box-shadow: 4px 4px 0 var(--sign); }
+  .hours th, .hours td { padding: .7rem 0; }
+  .hours tr.is-today th::after { content: attr(data-today); display: block; width: fit-content; margin-top: .2rem; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; background: #e3f2e8; color: var(--green); padding: .1rem .5rem; border-radius: 99px; }
+
+  /* Boxes and forms */
+  .box { padding: 1.25rem; }
+  .biz .btn, .two-col .btn, .google-box .btn { width: 100%; justify-content: center; }
+  .map-box { min-height: 300px; margin-top: 1.5rem; }
+  .map-consent { position: relative; inset: auto; min-height: 300px; }
+  .page-head { padding-block: 1.75rem .5rem; }
+  .page-head .lead { font-size: 1.1rem; }
+  .chapter { margin-bottom: 2.25rem; }
+
+  /* Footer */
+  .site-footer { padding-block: 2.5rem 1.25rem; }
+  .footer-grid { gap: 1.5rem 2rem; }
+  .footer-bottom { margin-top: 1.75rem; flex-direction: column; }
+
+  /* Quick-action bar */
+  .quickbar {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: var(--card); border-top: 1px solid var(--rule);
+    box-shadow: 0 -8px 20px -14px rgb(16 41 90 / .45);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .quickbar a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem;
+    min-height: 62px; padding: .4rem .25rem;
+    font-family: var(--font-head); font-weight: 700; font-size: .82rem; color: var(--ink-2); text-decoration: none;
+  }
+  .quickbar a + a { border-left: 1px solid var(--rule); }
+  .quickbar a:active { background: var(--sign-light); }
+  .quickbar a:first-child { background: var(--sign); color: #fff; }
+  .quickbar svg { width: 24px; height: 24px; }
+  .qb-hours { position: relative; }
+  .qb-hours::after {
+    content: ""; position: absolute; top: 10px; left: calc(50% + 9px);
+    width: 9px; height: 9px; border-radius: 50%; border: 2px solid var(--card); background: #9aa3b5;
+  }
+  .qb-hours[data-state="open"]::after { background: #2fae63; }
+  .qb-hours[data-state="closed"]::after { background: #e0613f; }
+}
+
+@media (max-width: 380px) {
+  .topbar { font-size: .82rem; }
+  .langs button { min-width: 34px; padding: .2rem .3rem; }
+  .logo img { width: 40px; height: 40px; }
+  .logo-name { font-size: 1.15rem; }
+}
+@media (max-width: 340px) {
+  .menu-btn span { display: none; }
+}
+
 @media print {
-  .topbar, .site-header::after, .site-footer, .map-box, .menu-btn { display: none !important; }
+  .topbar, .site-header::after, .site-footer, .map-box, .menu-btn, .quickbar { display: none !important; }
 }

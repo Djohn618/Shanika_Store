@@ -35,9 +35,9 @@
         <span class="topbar-address" data-i18n="top.address">No. 119, Kandy Road, Trincomalee</span>
       </div>
       <div class="langs" role="group" aria-label="Language">
-        <button type="button" data-lang="en" lang="en" aria-pressed="true">English</button>
-        <button type="button" data-lang="si" lang="si" aria-pressed="false">සිංහල</button>
-        <button type="button" data-lang="ta" lang="ta" aria-pressed="false">தமிழ்</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="true" aria-label="English"><span class="l-full">English</span><span class="l-short" aria-hidden="true">EN</span></button>
+        <button type="button" data-lang="si" lang="si" aria-pressed="false" aria-label="සිංහල"><span class="l-full">සිංහල</span><span class="l-short" aria-hidden="true">සිං</span></button>
+        <button type="button" data-lang="ta" lang="ta" aria-pressed="false" aria-label="தமிழ்"><span class="l-full">தமிழ்</span><span class="l-short" aria-hidden="true">தமி</span></button>
       </div>
     </div>
   </div>
@@ -46,9 +46,9 @@
     <div class="wrap">
       <a class="logo" href="/">
         <img src="/images/logo.png" width="240" height="240" alt="">
-        <span class="logo-name">Shanika Super &amp; Grocery<span class="logo-tag" data-i18n="logo.tag">Trincomalee · since 2014</span></span>
+        <span class="logo-name"><span class="ln-1">Shanika</span> <span class="ln-2">Super &amp; Grocery</span><span class="logo-tag" data-i18n="logo.tag">Trincomalee · since 2014</span></span>
       </a>
-      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav"><span data-i18n="a11y.menu">Menu</span></button>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path class="mb-1" d="M4 7h16"/><path class="mb-2" d="M4 12h16"/><path class="mb-3" d="M4 17h16"/></svg><span data-i18n="a11y.menu">Menu</span></button>
       <nav class="nav" id="nav" aria-label="Main">
         <ul>
           <li><a href="/" data-i18n="nav.home">Home</a></li>
@@ -154,6 +154,21 @@
       </div>
     </div>
   </footer>
+
+  <nav class="quickbar" aria-label="Quick actions">
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Shanika%20Super%20%26%20Grocery%2C%20Kandy%20Road%2C%20Trincomalee" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span data-i18n="qb.directions">Directions</span>
+    </a>
+    <a href="/location#hours" class="qb-hours" data-open-status>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+      <span data-i18n="qb.hours">Hours</span>
+    </a>
+    <a href="/location#contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+      <span data-i18n="qb.message">Message</span>
+    </a>
+  </nav>
 
   <script src="/js/i18n.js" defer></script>
   <script src="/js/main.js" defer></script>

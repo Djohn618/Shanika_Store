@@ -22,7 +22,7 @@
   <script>(function(){try{var l=localStorage.getItem('lang');if(l)document.documentElement.lang=l}catch(e){}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Caveat:wght@500..700&family=Source+Sans+3:wght@400..700&family=Noto+Sans+Sinhala:wght@400..700&family=Noto+Sans+Tamil:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,500..900&family=Courier+Prime:wght@400;700&family=Caveat:wght@500..700&family=Source+Sans+3:wght@400..700&family=Noto+Sans+Sinhala:wght@400..700&family=Noto+Sans+Tamil:wght@400..700&display=swap">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">
   {
@@ -87,41 +87,58 @@
   <main id="main">
     <section class="hero">
       <div class="wrap">
-        <div class="hero-text">
-          <h1 data-i18n="hero.title">Your grocery shop at Abayapura Junction.</h1>
-          <p class="lead" data-i18n="hero.lead">Rice by the kilo or the bag, dhal, sugar, spices, soap, Litro gas and phone reloads. A family shop on Kandy Road, open every day since 2014.</p>
-          <div class="hero-actions">
-            <a class="btn" href="/location" data-i18n="cta.find">How to find us</a>
-            <a class="btn btn--plain" href="/about" data-i18n="cta.story">How it all started</a>
-          </div>
+        <p class="greet" aria-hidden="true"><span lang="si">ආයුබෝවන්</span> · <span lang="ta">வணக்கம்</span> · <span lang="en">Welcome</span></p>
+        <div class="signboard">
+          <span class="screw tl"></span><span class="screw tr"></span><span class="screw bl"></span><span class="screw br"></span>
+          <h1><span class="sb-1">Shanika Super</span> <span class="sb-2">&amp; Grocery</span></h1>
+          <p class="sb-line">No. 119, Abayapura Junction, Kandy Road, Trincomalee</p>
         </div>
-        <div class="hero-photo">
-          <figure class="polaroid">
+
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="intro" data-i18n="hero.title">Your grocery shop at Abayapura Junction.</p>
+            <p class="lead" data-i18n="hero.lead">Rice by the kilo or the bag, dhal, sugar, spices, soap, Litro gas and phone reloads. A family shop on Kandy Road, open every day since 2014.</p>
+            <div class="hero-actions">
+              <a class="btn" href="/location" data-i18n="cta.find">How to find us</a>
+              <a class="btn btn--plain" href="/about" data-i18n="cta.story">How it all started</a>
+            </div>
+          </div>
+          <figure class="hero-photo print">
             <img src="/images/storefront.jpg" width="680" height="322" alt="The blue front of Shanika Super &amp; Grocery on Kandy Road" fetchpriority="high">
             <figcaption data-i18n="hero.caption">Our shop on Kandy Road</figcaption>
+            <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="stamp-ring" d="M60 60m-41 0a41 41 0 1 1 82 0a41 41 0 1 1 -82 0"/></defs>
+              <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="3"/>
+              <circle cx="60" cy="60" r="31" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <text font-size="11.5" letter-spacing="2.2" fill="currentColor"><textPath href="#stamp-ring">EST. 2014 · TRINCOMALEE · SRI LANKA ·</textPath></text>
+              <text x="60" y="57" text-anchor="middle" font-size="10" font-weight="700" fill="currentColor">No.</text>
+              <text x="60" y="76" text-anchor="middle" font-size="22" font-weight="800" fill="currentColor">119</text>
+            </svg>
           </figure>
-          <div class="hero-note">
-            <svg viewBox="0 0 54 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 36c10-2 22-10 30-22"/><path d="M26 12l8 2 1-8"/></svg>
-            <span class="hand" data-i18n="hero.note">opposite People's Bank!</span>
-          </div>
         </div>
       </div>
     </section>
 
     <section class="section section--paper2">
       <div class="wrap shelves">
-        <div class="board">
-          <h2 data-i18n="board.title">On our shelves</h2>
-          <ul>
-            <li><span data-i18n="board.2">Rice, dhal, sugar &amp; flour <small>by the kilo or by the bag</small></span></li>
-            <li><span data-i18n="board.3">Spices, curry powder &amp; coconut oil</span></li>
-            <li><span data-i18n="board.4">Soap &amp; household things</span></li>
-            <li><span data-i18n="board.5">Litro gas <small>bring your empty cylinder</small></span></li>
-            <li><span data-i18n="board.6">Phone reloads <small>Mobitel &amp; other networks</small></span></li>
+        <div class="receipt">
+          <div class="r-head"><strong>SHANIKA SUPER &amp; GROCERY</strong><br>No.119 Abayapura Jct, Kandy Rd<br>Trincomalee</div>
+          <div class="r-rule" aria-hidden="true"></div>
+          <p class="r-title" data-i18n="board.title">On our shelves</p>
+          <ul class="r-items">
+            <li><span data-i18n="board.2">Rice, dhal, sugar &amp; flour <small>by the kilo or by the bag</small></span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.3">Spices, curry powder &amp; coconut oil</span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.4">Soap &amp; household things</span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.5">Litro gas <small>bring your empty cylinder</small></span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.6">Phone reloads <small>Mobitel &amp; other networks</small></span><b aria-hidden="true">✓</b></li>
           </ul>
+          <div class="r-rule" aria-hidden="true"></div>
+          <p class="r-note" data-i18n="receipt.note">No online shop. Just come in!</p>
+          <p class="r-thanks" data-i18n="receipt.thanks">Thank you, come again</p>
+          <div class="r-barcode" aria-hidden="true"></div>
         </div>
         <div class="shelves-side">
-          <h2 data-i18n="shelves.title">Come in and have a look.</h2>
+          <h2 data-i18n="shelves.title">Come in and have a look</h2>
           <p data-i18n="shelves.p1">We don't sell online. The shop is small, but the shelves are full, and it's still run by the same family.</p>
           <p data-i18n="shelves.p2">Can't find something? Just ask at the counter.</p>
         </div>
@@ -130,13 +147,14 @@
 
     <section class="section">
       <div class="wrap story">
-        <figure class="polaroid" style="--tilt:-2.5deg">
+        <figure class="print story-photo">
           <img src="/images/founder.jpg" width="870" height="900" alt="Bandu Kumara John Kothalawalage" loading="lazy">
           <figcaption data-i18n="story.caption">Bandu Kumara, who started it all</figcaption>
         </figure>
         <div class="story-text">
-          <h2 class="section-title"><span class="hand" data-i18n="story.kicker">how it started</span><span data-i18n="story.title">Wood, coconut leaves and a car battery.</span></h2>
-          <p data-i18n="story.p1">In 2014, Bandu Kumara John Kothalawalage bought a small five-perch piece of land near the roundabout. With his wife and a few family members he built a vegetable stall out of wood and coconut leaves, and named it after his wife, Shanika.</p>
+          <span class="big-year" aria-hidden="true">2014</span>
+          <h2 data-i18n="story.title">Wood, coconut leaves and a car battery</h2>
+          <p class="dropcap" data-i18n="story.p1">In 2014, Bandu Kumara John Kothalawalage bought a small five-perch piece of land near the roundabout. With his wife and a few family members he built a vegetable stall out of wood and coconut leaves, and named it after his wife, Shanika.</p>
           <p data-i18n="story.p2">There was no electricity and no water. A car battery kept three LED bulbs going in the evenings. Every two months he travelled to Dambulla for vegetables, and slowly the stall started selling rice, beans and sugar too.</p>
           <blockquote class="pull">
             <p style="margin:0" data-i18n="quote.text">If you have a goal or a dream, never let others discourage you. Work hard, stay consistent and keep a kind heart. Success comes to those who never give up.</p>
@@ -168,8 +186,35 @@
     <section class="section">
       <div class="wrap visit">
         <div>
-          <h2 class="section-title"><span class="hand" data-i18n="visit.kicker">come and see us</span><span data-i18n="visit.title">Finding the shop</span></h2>
-          <address class="address"><strong>Shanika Super &amp; Grocery</strong><br>No. 119, Abayapura Junction<br>Kandy Road, Trincomalee</address>
+          <h2 data-i18n="visit.title">Finding the shop</h2>
+          <figure class="sketch">
+            <svg viewBox="0 0 560 330" role="img" aria-label="Rough sketch: the shop is on Kandy Road near the roundabout, across the road from People's Bank">
+              <g fill="none" stroke="#3c4558" stroke-width="2.4" stroke-linecap="round">
+                <path d="M14 142 C120 138 250 145 372 141"/>
+                <path d="M14 204 C130 207 260 200 372 205"/>
+                <path d="M444 104 C440 70 445 40 442 8"/>
+                <path d="M496 104 C500 66 495 38 498 8"/>
+                <path d="M444 242 C441 270 446 300 442 326"/>
+                <path d="M496 242 C499 272 494 300 498 326"/>
+              </g>
+              <path d="M30 173 C140 171 260 176 360 172" fill="none" stroke="#c9bfa9" stroke-width="2" stroke-dasharray="12 12"/>
+              <circle cx="470" cy="173" r="72" fill="none" stroke="#3c4558" stroke-width="2.4" stroke-dasharray="380 4 30 3"/>
+              <circle cx="470" cy="173" r="42" fill="#e4dccd" stroke="#3c4558" stroke-width="2"/>
+              <path d="M214 132 l4-62 l92 2 l-2 60 z" fill="#1f4fa3" stroke="#10295a" stroke-width="2.4" stroke-linejoin="round"/>
+              <text x="262" y="108" text-anchor="middle" fill="#fff" font-family="Archivo, sans-serif" font-weight="800" font-size="15">SHANIKA</text>
+              <path d="M210 216 l96 -2 l3 56 l-98 3 z" fill="#fffdf8" stroke="#3c4558" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M226 232h62M226 246h62M226 260h40" stroke="#c9bfa9" stroke-width="2"/>
+              <g class="sk-label" fill="#1d2433">
+                <text x="262" y="300" text-anchor="middle" font-size="21" data-i18n="sk.bank">People's Bank</text>
+                <text x="120" y="194" text-anchor="middle" font-size="19" fill="#6b6f7a" data-i18n="sk.road">Kandy Road (A6)</text>
+                <text x="470" y="179" text-anchor="middle" font-size="16" data-i18n="sk.round">roundabout</text>
+                <text x="372" y="40" fill="#1f4fa3" font-size="26" data-i18n="sk.here">we're here!</text>
+                <text x="18" y="318" font-size="16" fill="#6b6f7a" data-i18n="sk.note">rough sketch · not to scale</text>
+              </g>
+              <path d="M368 46 C340 54 322 62 314 76" fill="none" stroke="#1f4fa3" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M312 64 l2 13 l12 -5" fill="none" stroke="#1f4fa3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </figure>
           <p style="color:var(--ink-2)" data-i18n="visit.p">Look for the blue sign across the road from People's Bank, a few steps from the roundabout. Any tuk-tuk driver in town knows the junction.</p>
           <div class="hero-actions">
             <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Shanika%20Super%20%26%20Grocery%2C%20Kandy%20Road%2C%20Trincomalee" target="_blank" rel="noopener" data-i18n="cta.directions">Directions in Google Maps</a>
@@ -185,6 +230,7 @@
             </tbody>
           </table>
           <p class="note" data-i18n="hours.note">Hours can change on Poya days and public holidays.</p>
+          <address class="address door-address"><strong>Shanika Super &amp; Grocery</strong><br>No. 119, Abayapura Junction<br>Kandy Road, Trincomalee</address>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@
   'use strict';
 
   const SITE = {
-    email: 'deshanjohn618@gmail.com',
+    email: 'nipunasan91@gmail.com',
     // Opening hours in Sri Lanka time. Day 0 = Sunday.
     hours: { 0: [7, 20], 1: [6, 21], 2: [6, 21], 3: [6, 21], 4: [6, 21], 5: [6, 21], 6: [6, 21] },
     timeZone: 'Asia/Colombo',

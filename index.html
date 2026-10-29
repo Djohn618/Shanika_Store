@@ -22,7 +22,7 @@
   <script>(function(){try{var l=localStorage.getItem('lang');if(l)document.documentElement.lang=l}catch(e){}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Noto+Sans+Sinhala:wght@400..700&family=Noto+Sans+Tamil:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=Caveat:wght@600&family=Courier+Prime:wght@400;700&family=Noto+Sans+Sinhala:wght@400..700&family=Noto+Sans+Tamil:wght@400..700&display=swap">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">
   {
@@ -224,14 +224,41 @@
       <div class="wrap visit">
         <div>
           <h2 data-i18n="visit.title">Finding the shop</h2>
-          <address class="address"><strong>Shanika Super &amp; Grocery</strong><br>No. 119, Abayapura Junction<br>Kandy Road, Trincomalee</address>
+          <figure class="sketch">
+            <svg viewBox="0 0 560 330" role="img" aria-label="Rough sketch: the shop is on Kandy Road near the roundabout, across the road from People's Bank">
+              <g fill="none" stroke="#3c4558" stroke-width="2.4" stroke-linecap="round">
+                <path d="M14 142 C120 138 250 145 372 141"/>
+                <path d="M14 204 C130 207 260 200 372 205"/>
+                <path d="M444 104 C440 70 445 40 442 8"/>
+                <path d="M496 104 C500 66 495 38 498 8"/>
+                <path d="M444 242 C441 270 446 300 442 326"/>
+                <path d="M496 242 C499 272 494 300 498 326"/>
+              </g>
+              <path d="M30 173 C140 171 260 176 360 172" fill="none" stroke="#c9bfa9" stroke-width="2" stroke-dasharray="12 12"/>
+              <circle cx="470" cy="173" r="72" fill="none" stroke="#3c4558" stroke-width="2.4" stroke-dasharray="380 4 30 3"/>
+              <circle cx="470" cy="173" r="42" fill="#eef2f9" stroke="#3c4558" stroke-width="2"/>
+              <path d="M214 132 l4-62 l92 2 l-2 60 z" fill="#1f4fa3" stroke="#10295a" stroke-width="2.4" stroke-linejoin="round"/>
+              <text x="262" y="108" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-weight="700" font-size="15">SHANIKA</text>
+              <path d="M210 216 l96 -2 l3 56 l-98 3 z" fill="#fffdf8" stroke="#3c4558" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M226 232h62M226 246h62M226 260h40" stroke="#c9bfa9" stroke-width="2"/>
+              <g class="sk-label" fill="#1d2433">
+                <text x="262" y="300" text-anchor="middle" font-size="21" data-i18n="sk.bank">People's Bank</text>
+                <text x="120" y="194" text-anchor="middle" font-size="19" fill="#6b6f7a" data-i18n="sk.road">Kandy Road (A6)</text>
+                <text x="470" y="179" text-anchor="middle" font-size="16" data-i18n="sk.round">roundabout</text>
+                <text x="372" y="40" fill="#1f4fa3" font-size="26" data-i18n="sk.here">we're here!</text>
+                <text x="18" y="318" font-size="16" fill="#6b6f7a" data-i18n="sk.note">rough sketch · not to scale</text>
+              </g>
+              <path d="M368 46 C340 54 322 62 314 76" fill="none" stroke="#1f4fa3" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M312 64 l2 13 l12 -5" fill="none" stroke="#1f4fa3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </figure>
           <p style="color:var(--ink-2)" data-i18n="visit.p">Look for the blue sign across the road from People's Bank, a few steps from the roundabout. Any tuk-tuk driver in town knows the junction.</p>
           <div class="hero-actions">
             <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Shanika%20Super%20%26%20Grocery%2C%20Kandy%20Road%2C%20Trincomalee" target="_blank" rel="noopener" data-i18n="qb.directions">Directions</a>
             <a class="btn btn--plain" href="/location" data-i18n="cta.map">See the map</a>
           </div>
         </div>
-        <div class="hours-card">
+        <div class="door-sign">
           <h3 data-i18n="hours.title">Opening hours</h3>
           <table class="hours">
             <tbody>
@@ -240,6 +267,7 @@
             </tbody>
           </table>
           <p class="note" data-i18n="hours.note">Hours can change on Poya days and public holidays.</p>
+          <address class="address door-address"><strong>Shanika Super &amp; Grocery</strong><br>No. 119, Abayapura Junction<br>Kandy Road, Trincomalee</address>
         </div>
       </div>
     </section>

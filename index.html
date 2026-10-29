@@ -22,7 +22,7 @@
   <script>(function(){try{var l=localStorage.getItem('lang');if(l)document.documentElement.lang=l}catch(e){}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=Noto+Sans+Sinhala:wght@400..700&family=Noto+Sans+Tamil:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=Courier+Prime:wght@400;700&family=Noto+Sans+Sinhala:wght@400..700&family=Noto+Sans+Tamil:wght@400..700&display=swap">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">
   {
@@ -134,42 +134,58 @@
         </div>
         <figure class="hero-photo">
           <img src="/images/storefront.jpg" width="680" height="322" alt="The blue front of Shanika Super &amp; Grocery on Kandy Road" fetchpriority="high">
-          <div class="status-card">
-            <span class="open-now" data-open-status><span class="status-text">Open every day</span></span>
-            <small>No. 119, Kandy Road</small>
-          </div>
+          <span class="status-pill open-now" data-open-status><span class="status-text">Open every day</span></span>
         </figure>
       </div>
     </section>
 
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <ul class="ticker-group">
+          <li><span data-i18n="tick.rice">Rice &amp; grains</span></li>
+          <li><span data-i18n="tick.spice">Spices</span></li>
+          <li><span data-i18n="tick.drinks">Drinks &amp; snacks</span></li>
+          <li><span data-i18n="tick.home">Household</span></li>
+          <li><span data-i18n="tick.gas">Litro gas</span></li>
+          <li><span data-i18n="tick.reload">Mobile reloads</span></li>
+          <li><span data-i18n="tick.bulk">Bulk orders</span></li>
+        </ul>
+        <ul class="ticker-group">
+          <li><span data-i18n="tick.rice">Rice &amp; grains</span></li>
+          <li><span data-i18n="tick.spice">Spices</span></li>
+          <li><span data-i18n="tick.drinks">Drinks &amp; snacks</span></li>
+          <li><span data-i18n="tick.home">Household</span></li>
+          <li><span data-i18n="tick.gas">Litro gas</span></li>
+          <li><span data-i18n="tick.reload">Mobile reloads</span></li>
+          <li><span data-i18n="tick.bulk">Bulk orders</span></li>
+        </ul>
+      </div>
+    </div>
+
     <section class="section section--paper2">
-      <div class="wrap">
-        <div class="section-head">
+      <div class="wrap shelves">
+        <div class="receipt">
+          <div class="r-head"><strong>SHANIKA SUPER &amp; GROCERY</strong><br>No.119 Abayapura Jct, Kandy Rd<br>Trincomalee</div>
+          <div class="r-rule" aria-hidden="true"></div>
+          <p class="r-title" data-i18n="board.title">On our shelves</p>
+          <ul class="r-items">
+            <li><span data-i18n="board.2">Rice, dhal, sugar &amp; flour <small>by the kilo or by the bag</small></span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.3">Spices, curry powder &amp; coconut oil</span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.4">Soap &amp; household things</span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.5">Litro gas <small>bring your empty cylinder</small></span><b aria-hidden="true">✓</b></li>
+            <li><span data-i18n="board.6">Phone reloads <small>Mobitel &amp; other networks</small></span><b aria-hidden="true">✓</b></li>
+          </ul>
+          <div class="r-rule" aria-hidden="true"></div>
+          <p class="r-note" data-i18n="receipt.note">No online shop. Just come in!</p>
+          <p class="r-thanks" data-i18n="receipt.thanks">Thank you, come again</p>
+          <div class="r-barcode" aria-hidden="true"></div>
+        </div>
+        <div class="shelves-side">
+          <span class="eyebrow" data-i18n="board.title">On our shelves</span>
           <h2 data-i18n="shelves.title">Come in and have a look</h2>
           <p class="lead" data-i18n="shelves.p1">We don't sell online. The shop is small, but the shelves are full, and it's still run by the same family.</p>
+          <p class="muted" data-i18n="shelves.p2">Can't find something? Just ask at the counter.</p>
         </div>
-        <ul class="sell" role="list" style="list-style:none;margin:0;padding:0">
-          <li class="sell-item">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5h10l-1.5 4c3.5 2.5 5 6.5 4.5 11-.4 4-3.4 7-8 7s-7.6-3-8-7c-.5-4.5 1-8.5 4.5-11z"/><path d="M12.5 9h7"/><path d="M13 17c1 .8 2 1.2 3 1.2s2-.4 3-1.2"/></svg>
-            <h3 data-i18n="board.2">Rice, dhal, sugar &amp; flour <small>by the kilo or by the bag</small></h3>
-          </li>
-          <li class="sell-item">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3h6v4l2 3v17a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2V10l2-3z"/><path d="M13 7h6"/><path d="M11 15h10v7H11z"/></svg>
-            <h3 data-i18n="board.3">Spices, curry powder &amp; coconut oil</h3>
-          </li>
-          <li class="sell-item">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="20" height="13" rx="4"/><circle cx="11" cy="8" r="2.5"/><circle cx="18" cy="6" r="1.6"/><circle cx="21.5" cy="10.5" r="1.2"/></svg>
-            <h3 data-i18n="board.4">Soap &amp; household things</h3>
-          </li>
-          <li class="sell-item">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4h6v4h-6z"/><path d="M10 8h12a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><path d="M7 14h18M7 22h18"/></svg>
-            <h3 data-i18n="board.5">Litro gas <small>bring your empty cylinder</small></h3>
-          </li>
-          <li class="sell-item">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="14" height="26" rx="3"/><path d="M14 25h4"/><path d="M13 12.5a4.5 4.5 0 0 1 6 0M14.8 15a2 2 0 0 1 2.4 0"/></svg>
-            <h3 data-i18n="board.6">Phone reloads <small>Mobitel &amp; other networks</small></h3>
-          </li>
-        </ul>
       </div>
     </section>
 

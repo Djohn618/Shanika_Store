@@ -53,19 +53,30 @@
     applyLanguage(store.get('lang') || 'en');
   }
 
-  /* ---------- Mobile menu ---------- */
+  /* ---------- Full-screen menu (phones) ---------- */
   function initMenu() {
     const btn = document.querySelector('.menu-btn');
-    const nav = document.getElementById('nav');
-    if (!btn || !nav) return;
+    const overlay = document.getElementById('menu');
+    if (!btn || !overlay) return;
+    const closeBtn = overlay.querySelector('.menu-close');
+    overlay.inert = true;
+
     const set = (open) => {
       document.body.classList.toggle('menu-open', open);
       btn.setAttribute('aria-expanded', String(open));
+      overlay.inert = !open;
+      // wait for the overlay to become visible before moving focus into it
+      setTimeout(() => (open ? closeBtn : btn).focus(), 60);
     };
-    btn.addEventListener('click', () => set(!document.body.classList.contains('menu-open')));
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') set(false); });
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !btn.contains(e.target)) set(false);
+
+    btn.addEventListener('click', () => set(true));
+    closeBtn.addEventListener('click', () => set(false));
+    overlay.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => set(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.body.classList.contains('menu-open')) set(false);
+    });
+    window.matchMedia('(min-width: 861px)').addEventListener('change', (e) => {
+      if (e.matches && document.body.classList.contains('menu-open')) set(false);
     });
   }
 

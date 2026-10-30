@@ -4,6 +4,7 @@
 
   const SITE = {
     email: 'nipunasan91@gmail.com',
+    formEndpoint: 'https://formspree.io/f/xgoezlkv',
     // Opening hours in Sri Lanka time. Day 0 = Sunday.
     hours: { 0: [7, 20], 1: [6, 21], 2: [6, 21], 3: [6, 21], 4: [6, 21], 5: [6, 21], 6: [6, 21] },
     timeZone: 'Asia/Colombo',
@@ -141,7 +142,7 @@
     });
   }
 
-  /* ---------- Forms (delivered by e-mail through FormSubmit) ---------- */
+  /* ---------- Forms (delivered by e-mail through Formspree) ---------- */
   function initForms() {
     document.querySelectorAll('form[data-form]').forEach((form) => {
       const status = form.querySelector('.form-status');
@@ -161,10 +162,10 @@
 
         const data = Object.fromEntries(new FormData(form).entries());
         delete data._honey;
+        // leave out empty optional fields (Formspree checks that "email" is a real address)
+        Object.keys(data).forEach((k) => { if (!String(data[k]).trim()) delete data[k]; });
         const payload = Object.assign({
-          _subject: (form.dataset.form === 'feedback' ? 'New feedback' : 'New message') + ' from shanikastore.com',
-          _template: 'table',
-          _captcha: 'false',
+          _subject: (data.topic ? data.topic + ': ' : '') + 'new message from shanikastore.com',
           language: lang
         }, data);
 
@@ -173,17 +174,18 @@
         button.textContent = t('form.sending');
 
         try {
-          const res = await fetch('https://formsubmit.co/ajax/' + SITE.email, {
+          const res = await fetch(SITE.formEndpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
             body: JSON.stringify(payload)
           });
           const json = await res.json().catch(() => ({}));
-          if (!res.ok || String(json.success) === 'false') throw new Error('send failed');
+          if (!res.ok || json.errors) throw new Error('Formspree: ' + JSON.stringify(json.errors || res.status));
           form.reset();
           form.querySelectorAll('.rating-hint').forEach((h) => { h.textContent = ''; });
           show('success', 'form.success');
         } catch (err) {
+          console.error(err);
           show('error', 'form.error');
         } finally {
           button.disabled = false;

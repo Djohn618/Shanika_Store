@@ -6,3 +6,6 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+
+# Instagram promo video (local only, not part of the website)
+promo-video/
